@@ -10,7 +10,9 @@ The test case naming convention is as follows: "X_bin_picking_Y", where:
 
 The dataset also contains a test case called "0_bin_picking" where the box is empty.
 
-# Structure
+# File formats
+
+Each test case is available in multiple formats, each one in a distinct sub-folder.
 
 Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene
