@@ -18,5 +18,5 @@ Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene
 - a .zdf (Zivid native format) file with the point cloud, color image and depth image
 
-# Future work:
-- make the color and depth images available in more conventional formats such as .png
+# Future work
+- Make the color and depth images available in more conventional formats such as .png
