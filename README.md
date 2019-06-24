@@ -15,8 +15,8 @@ The dataset also contains a test case called "0_bin_picking" where the box is em
 Each test case is available in multiple formats, each one in a distinct sub-folder.
 
 Each test case contains the following files:
-- a .ply (Polygon File Format) file with the unordered point cloud of the scene
-- a .zdf (Zivid native format) file with the point cloud, color image and depth image
+- a .ply (Polygon File Format) file with the unordered point cloud of the scene.
+- a .zdf (Zivid native format) file with the point cloud, color image and depth image. These files can be opened with Zivid Studio.
 
 # Future work
 - Make the color and depth images available in more conventional formats such as .png
