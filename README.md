@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/192831421.svg)](https://zenodo.org/badge/latestdoi/192831421)
+
 # Overview
 
 This repository contains the dataset used in "Perception of Entangled Tubes for Automated Bin Picking". This dataset is intended to be used to help evaluate perception algorithms of entangled tubes.
