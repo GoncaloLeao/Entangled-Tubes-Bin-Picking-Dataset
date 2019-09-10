@@ -10,6 +10,23 @@ The test case naming convention is as follows: "X_bin_picking_Y", where:
 
 The dataset also contains a test case called "0_bin_picking" where the box is empty.
 
+# Terms of use
+
+Over and above the legal restrictions of the license, this dataset is for research purposes only. When using this dataset, namely when writing a research paper or article, the End User shall reference the following scientific paper:
+
+(IEEE citation format)
+G. Leão, C. Costa, A. Sousa, and G. Veiga, “Perception of Entangled Tubes for Automated Bin Picking,” in Advances in Intelligent Systems and Computing, 2019.
+
+(Bibtex citation)
+@inbook{Leao2019,	
+	title={Perception of Entangled Tubes for Automated Bin Picking},
+  author={Leão, Gonçalo and Costa, Carlos and Sousa, Armando and Veiga, Germano},
+	booktitle={Advances in Intelligent Systems and Computing}, 
+	publisher={Springer},
+  year={2019}
+  address = {Porto, Portugal}
+}
+
 # File formats
 
 Each test case is available in multiple formats, each one in a distinct sub-folder.
