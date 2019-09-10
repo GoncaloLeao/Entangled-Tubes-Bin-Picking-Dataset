@@ -18,6 +18,7 @@ Over and above the legal restrictions of the license, this dataset is for resear
 G. Leão, C. Costa, A. Sousa, and G. Veiga, “Perception of Entangled Tubes for Automated Bin Picking,” in Advances in Intelligent Systems and Computing, 2019.
 
 (Bibtex citation)
+```
 @inbook{Leao2019,	
 	title={Perception of Entangled Tubes for Automated Bin Picking},
   author={Leão, Gonçalo and Costa, Carlos and Sousa, Armando and Veiga, Germano},
@@ -26,6 +27,7 @@ G. Leão, C. Costa, A. Sousa, and G. Veiga, “Perception of Entangled Tubes for
   year={2019}
   address = {Porto, Portugal}
 }
+```
 
 # File formats
 
