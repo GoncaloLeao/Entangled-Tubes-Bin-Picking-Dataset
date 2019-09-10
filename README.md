@@ -21,13 +21,13 @@ G. Leão, C. Costa, A. Sousa, and G. Veiga, “Perception of Entangled Tubes for
 
 (Bibtex citation)
 ```
-@inbook{Leao2019,	
+@inbook{Leao2019,
 	title={Perception of Entangled Tubes for Automated Bin Picking},
-  author={Leão, Gonçalo and Costa, Carlos and Sousa, Armando and Veiga, Germano},
-	booktitle={Advances in Intelligent Systems and Computing}, 
+	author={Leão, Gonçalo and Costa, Carlos and Sousa, Armando and Veiga, Germano},
+	booktitle={Advances in Intelligent Systems and Computing},
 	publisher={Springer},
-  year={2019}
-  address = {Porto, Portugal}
+	year={2019},
+	address = {Porto, Portugal}
 }
 ```
 
