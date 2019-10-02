@@ -6,7 +6,7 @@ This repository contains the dataset used in "Perception of Entangled Tubes for 
 
 The dataset consists of point clouds captured by a Zivid One Plus sensor looking downwards towards a 55 cm (length) x 37 cm (width) x 20 cm (height) box with variable amounts of tube in different arrangements. The tubes are made of Polyvinyl chloride (PVC) and are bent with different curvatures. Each tube has a diameter of 2.5 cm and a length of 50 cm. 
 
-The test case naming convention is as follows: "X_bin_picking_Y", where:
+The test case naming convention is as follows: "X_bin_pickingY", where:
 - X is the actual number of tubes present in the box (ranges from 1 to 10)
 - Y is the test case ID (ranges from 1 to 5)
 
