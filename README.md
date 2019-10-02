@@ -41,5 +41,7 @@ Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene.
 - a .zdf (Zivid native format) file with the point cloud, color image and depth image. These files can be opened with Zivid Studio.
 
+Note: The cloud point coordinates are expressed in millimeters (mm).
+
 # Future work
 - Make the color and depth images available in more conventional formats such as .png
