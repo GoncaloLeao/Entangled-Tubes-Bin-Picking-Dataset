@@ -2,7 +2,7 @@
 
 # Overview
 
-This repository contains the dataset used in "Detecting and Solving Tube Entanglement in Bin Picking Operations".
+This dataset was used in "Detecting and Solving Tube Entanglement in Bin Picking Operations".
 
 The dataset consists of point clouds captured by a Photoneo PhoXi 3D Scanner S looking downwards towards a 77 cm (length) x 58 cm (width) x 9 cm (height) box with variable amounts of tube in different arrangements.
 
