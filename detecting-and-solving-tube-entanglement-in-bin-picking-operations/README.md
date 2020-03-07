@@ -4,6 +4,8 @@
 
 This dataset was used in "Detecting and Solving Tube Entanglement in Bin Picking Operations".
 
+The raw footage of all the experiments is available in a playlist on Youtube: https://www.youtube.com/playlist?list=PLYO0JZ1ogamkUBgOI4QMSMGd6xnwgI8vV
+
 The dataset consists of point clouds captured by a Photoneo PhoXi 3D Scanner S looking downwards towards a 77 cm (length) x 58 cm (width) x 9 cm (height) box with variable amounts of tube in different arrangements.
 
 Two sets of tubes were used:
@@ -45,3 +47,11 @@ Each test case is available in multiple formats, each one in a distinct sub-fold
 Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene.
 - a .png (Zivid native format) file, of black-and-white images captured by the sensor's camera.
+
+# Image examples
+
+Here are some images from the dataset.
+
+![Set A, test case 1, 7 tubes](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/master/detecting-and-solving-tube-entanglement-in-bin-picking-operations/A1/7.png)
+
+![Set B, test case 1, 7 tubes](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/master/detecting-and-solving-tube-entanglement-in-bin-picking-operations/B1/7.png)
