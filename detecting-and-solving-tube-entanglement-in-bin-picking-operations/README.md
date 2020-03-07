@@ -47,3 +47,11 @@ Each test case is available in multiple formats, each one in a distinct sub-fold
 Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene.
 - a .png (Zivid native format) file, of black-and-white images captured by the sensor's camera.
+
+# Image examples
+
+Here are some images from the dataset.
+
+![Set A, test case 1, 7 tubes](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/master/detecting-and-solving-tube-entanglement-in-bin-picking-operations/A1/7.png)
+
+![Set B, test case 1, 7 tubes](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/master/detecting-and-solving-tube-entanglement-in-bin-picking-operations/B1/7.png)
