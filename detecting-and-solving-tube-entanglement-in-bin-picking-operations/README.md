@@ -32,12 +32,24 @@ Over and above the legal restrictions of the license, this dataset is for resear
 
 (IEEE citation format)
 ```
-To be added
+G. Leão, C. M. Costa, A. Sousa, and G. Veiga, “Detecting and Solving Tube Entanglement in Bin Picking Operations,” Applied Sciences, vol. 10, no. 7, p. 2264, Mar. 2020.
 ```
 
 (Bibtex citation)
 ```
-To be added
+@article{Leao2020,
+          title={Detecting and Solving Tube Entanglement in Bin Picking Operations},
+          author={Leão, Gonçalo and Costa, Carlos M. and Sousa, Armando and Veiga, Germano},
+          volume={10},
+          ISSN={2076-3417},
+          url={http://dx.doi.org/10.3390/app10072264},
+          DOI={10.3390/app10072264},
+          number={7},
+          journal={Applied Sciences},
+          publisher={MDPI AG},
+          year={2020},
+          month={Mar},
+          pages={2264}}
 ```
 
 # File formats
