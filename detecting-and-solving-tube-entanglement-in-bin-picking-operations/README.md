@@ -30,9 +30,7 @@ Each round is composed of a sequence of picking attempts. Each test case (pickin
 - N is the remaining number of tubes in the bin (ranges from 0 to 7)
 - M is the number of the attempt (starting at 1).
 
-All of the second picking attempts were sucessful.
-
-Each 
+All of the second picking attempts were sucessful. 
 
 # Terms of use
 
