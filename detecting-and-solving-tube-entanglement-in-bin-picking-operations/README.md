@@ -21,10 +21,18 @@ Properties of each set of tubes:
 | Stiffness | Fully rigid | Semi-rigid |
 | Weight | 55 g | 110 g |
 
-The test case naming convention is as follows: "X_Y_Z", where:
+A round consists of fully emptying the contents of a bin. Some rounds ended prematurely since some of the tubes were outside the scanner's range.  
+Each round is associated with a folder, which is named with the following convention: "XY", where:
 - X is the identifier of the set ("A" or "B")
-- Y is the test case ID (ranges from 1 to 5)
-- Z is the actual number of tubes present in the box (ranges from 0 to 7)
+- Y is the test case ID (ranges from 1 to 20)
+
+Each round is composed of a sequence of picking attempts. Each test case (picking attempt) is named using the following convention: "N" (if only a single attempt was needed to remove a tube from the bin) or "N_M" (if multiple attempts were needed), where:
+- N is the remaining number of tubes in the bin (ranges from 0 to 7)
+- M is the number of the attempt (starting at 1).
+
+All of the second picking attempts were sucessful.
+
+Each 
 
 # Terms of use
 
