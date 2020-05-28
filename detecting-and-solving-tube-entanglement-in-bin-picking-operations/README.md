@@ -49,7 +49,8 @@ G. Leão, C. M. Costa, A. Sousa, and G. Veiga, “Detecting and Solving Tube Ent
           publisher={MDPI AG},
           year={2020},
           month={Mar},
-          pages={2264}}
+          pages={2264}
+}
 ```
 
 # File formats
