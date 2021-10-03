@@ -29,7 +29,7 @@ The tubes in set C have bifurcations. Their topology graph is presented below:
 
 Properties of each segment of the tubes in set C:
 | | Edge_1_2 | Edge_1_3 | Edge_1_4 | Edge 2_5 | Edge 2_6 |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | --- |
 | Length | 30 cm | 10 cm | 10 cm | 10 cm | 15 cm |
 | Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | 2 cm | 2 cm | 2 cm |
 | Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 2/5 | 2/5 | 2/5 | 2/6 |
