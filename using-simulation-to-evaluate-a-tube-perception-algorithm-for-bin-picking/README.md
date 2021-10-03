@@ -2,15 +2,29 @@
 
 # Overview
 
-This dataset was used in "Perception of Entangled Tubes for Automated Bin Picking". This dataset is intended to be used to help evaluate perception algorithms of entangled tubes.
+This dataset was generated and used in "Using Simulation to Evaluate a Tube Perception Algorithm for Bin Picking". This dataset is intended to be used to help evaluate perception algorithms of entangled tubes. The paper presents a methodology for performing this evaluation.
 
-The dataset consists of point clouds captured by a Zivid One Plus sensor looking downwards towards a 55 cm (length) x 37 cm (width) x 20 cm (height) box with variable amounts of tube in different arrangements. The tubes are made of Polyvinyl chloride (PVC) and are bent with different curvatures. Each tube has a diameter of 2.5 cm and a length of 50 cm. 
+The dataset consists of point clouds composed of tubes that were procedurally generated in a Gazebo environment. The tubes are placed in a bin with dimensions 55 cm (length) x 37 cm (width) x 20 cm (height). All of the data was captured at a time instant where the tubes were stabilized inside the bin (i.e. their linear and angular velocities were very close to 0). Alongside the point clouds, the dataset also includes a geometric representation of the tubes and .gazebo world files, which can be run in Gazebo to interact with each bin filled with tubes.
 
-The test case naming convention is as follows: "X_bin_pickingY", where:
-- X is the actual number of tubes present in the box (ranges from 1 to 10)
-- Y is the test case ID (ranges from 1 to 5)
+The clouds were generated using a Gazebo built-in virtual sensor that mimics a Zivid One Plus L scanner (which produces depth images with dimensions 1920 x 1200). The sensor is placed looking downwards towards the bin. 
 
-The dataset also contains a test case called "0_bin_picking" where the box is empty.
+To simplify the analysis and save space, only the points belonging to the tubes are included in the cloud (i.e. the clouds were pre-filtered to remove the points that belonged to the bin's bottom and walls).
+
+Each of the main directories refers to a collection of test cases with the same amount of tubes that were procedurally generated with the same properties. The naming convention of these directories is as follows: "XY", where:
+- X is the identifier of the set ("A", "B" or "C")
+- Y is the number of tubes in the bin
+
+Properties of each set of tubes:
+| | Set A | Set B | Set C |
+| --- | --- | --- | --- |
+| Shape | Linear | Linear | With bifurcations (see image below) |
+| Curve length | 50 cm | 50 cm | Not applicable (see image below) |
+| Radius | 1.25 cm | 1.25 cm | 1.25 cm |
+| Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | Varies for each segment |
+| Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 5/10 | Varies for each segment |
+| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5º/30º | 5º/45º | Varies for each segment |
+
+Within each of the main directories, there are three subdirectories, which contain each the test cases in a different format (refer to the "File formats" section below). Within the three subdirectories, there are 20 files, each one corresponding at a distinct test case. The name of these files refers to the test case ID.
 
 # Terms of use
 
@@ -18,19 +32,12 @@ Over and above the legal restrictions of the license, this dataset is for resear
 
 (IEEE citation format)
 ```
-G. Leão, C. Costa, A. Sousa, and G. Veiga, “Perception of Entangled Tubes for Automated Bin Picking,” in Advances in Intelligent Systems and Computing, 2019.
+(Awaiting publication)
 ```
 
 (Bibtex citation)
 ```
-@inbook{Leao2019,
-	title={Perception of Entangled Tubes for Automated Bin Picking},
-	author={Leão, Gonçalo and Costa, Carlos and Sousa, Armando and Veiga, Germano},
-	booktitle={Advances in Intelligent Systems and Computing},
-	publisher={Springer},
-	year={2019},
-	address = {Porto, Portugal}
-}
+(Awaiting publication)
 ```
 
 # File formats
@@ -39,9 +46,36 @@ Each test case is available in multiple formats, each one in a distinct sub-fold
 
 Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene.
-- a .zdf (Zivid native format) file with the point cloud, color image and depth image. These files can be opened with Zivid Studio.
+- a .world (Gazebo SDF format) file with the description of the scene for Gazebo. These files can be opened in Gazebo.
+- a .txt file with the geometric description of the tubes. The structure of this file is as follows:
 
-Note: The cloud point coordinates are expressed in millimeters (mm).
+```
+<number of tubes in the bin>
+<tube 1 description>
+<tube 2 description>
+...
+<tube N description>
+```
 
-# Future work
-- Make the color and depth images available in more conventional formats such as .png
+Each tube is described as a "pseudo-graph". Each node is associated with a bifurcation or endpoint. In the simulated environment, each node represents a sphere, while each edge represents a cylinder. Please note that, unlike, "conventional graphs" where *ONE* edge connects two nodes, in this representation, there is an ordered set of edges connecting node A to node B, since there are multiple cylinder connecting two endpoints/bifurcations. The "order" of each of the P edges in the "path" connecting two nodes is given by the "order" property (which ranges from 1 to P). The nodes' radii is the same as the cylinder's radii since all of the datasets contain tubes with constant radii throughout their length. The format for a tube description is as follows:
+```
+<ID> <number of nodes> <number of edges>
+<node 1 description>
+<node 2 description>
+...
+<node V description>
+<edge 1 description>
+<edge 2 description>
+...
+<edge E description>
+```
+
+Each node (sphere) is described as follows:
+```
+<ID> <center X coordinate> <center X coordinate> <center X coordinate> <sphere radius>
+```
+
+Each edge (cylinder) is described as follows:
+```
+<ID> <node 1 ID> <node 2 ID> <order> <center X coordinate> <center Y coordinate> <center Z coordinate> <axis orientation vector X component> <axis orientation vector Y component> <axis orientation vector Z component> <length>
+```
