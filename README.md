@@ -2,7 +2,7 @@
 
 # Overview
 
-This repository contains the datasets used in "Perception of Entangled Tubes for Automated Bin Picking" and "Detecting and Solving Tube Entanglement in Bin Picking Operations" scientific articles.
+This repository contains the datasets used in the scientific articles of my line of research on bin picking.
 
 # Terms of use
 
