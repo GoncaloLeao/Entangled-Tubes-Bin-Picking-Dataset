@@ -1,0 +1,2837 @@
+<?xml version ='1.0'?>
+<sdf version='1.7'>
+<world name='default'>
+  <plugin name='TubeGeneratorPlugin' filename='libtube_generator_plugin.so'/>
+  <model name='photoneo_s_sensor'>
+    <static>1</static>
+    <pose>-0 0 2 -1.5708 1.5708 0</pose>
+    <link name='link'>
+      <inertial>
+        <mass>0.1</mass>
+      </inertial>
+      <sensor name='sensor' type='depth'>
+        <update_rate>30</update_rate>
+        <camera>
+          <horizontal_fov>1.22</horizontal_fov>
+          <image>
+            <width>1920</width>
+            <height>1200</height>
+            <format>B8G8R8</format>
+          </image>
+          <clip>
+            <near>0.1</near>
+            <far>4</far>
+          </clip>
+          <depth_camera>
+            <output>points</output>
+          </depth_camera>
+        </camera>
+        <plugin name='camera_plugin' filename='libgazebo_ros_depth_camera.so'>
+          <baseline>0.2</baseline>
+          <alwaysOn>1</alwaysOn>
+          <updateRate>0.0</updateRate>
+          <cameraName>camera_ir</cameraName>
+          <imageTopicName>/camera/color/image_raw</imageTopicName>
+          <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+          <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+          <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+          <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+          <frameName>fr_optical</frameName>
+          <pointCloudCutoff>0.1</pointCloudCutoff>
+          <pointCloudCutoffMax>2.0</pointCloudCutoffMax>
+          <distortionK1>0</distortionK1>
+          <distortionK2>0</distortionK2>
+          <distortionK3>0</distortionK3>
+          <distortionT1>0</distortionT1>
+          <distortionT2>0</distortionT2>
+          <CxPrime>0</CxPrime>
+          <Cx>0</Cx>
+          <Cy>0</Cy>
+          <focalLength>0</focalLength>
+          <hackBaseline>0</hackBaseline>
+        </plugin>
+      </sensor>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+  </model>
+  <gravity>0 0 -9.8</gravity>
+  <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+  <atmosphere type='adiabatic'/>
+  <physics name='default_physics' default='0' type='ode'>
+    <max_step_size>0.003</max_step_size>
+    <real_time_factor>1</real_time_factor>
+    <real_time_update_rate>1000</real_time_update_rate>
+    <max_contacts>10000</max_contacts>
+    <ode>
+      <solver>
+        <type>quick</type>
+        <iters>100</iters>
+        <sor>1.3</sor>
+        <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+      </solver>
+      <constraints>
+        <contact_max_correcting_vel>0</contact_max_correcting_vel>
+        <contact_surface_layer>0.001</contact_surface_layer>
+        <cfm>0</cfm>
+        <erp>0.2</erp>
+      </constraints>
+    </ode>
+  </physics>
+  <scene>
+    <ambient>0.4 0.4 0.4 1</ambient>
+    <background>0.7 0.7 0.7 1</background>
+    <shadows>0</shadows>
+  </scene>
+  <audio>
+    <device>default</device>
+  </audio>
+  <wind/>
+  <spherical_coordinates>
+    <surface_model>EARTH_WGS84</surface_model>
+    <latitude_deg>0</latitude_deg>
+    <longitude_deg>0</longitude_deg>
+    <elevation>0</elevation>
+    <heading_deg>0</heading_deg>
+  </spherical_coordinates>
+  <state world_name='default'>
+    <sim_time>882 944000000</sim_time>
+    <real_time>83 149205841</real_time>
+    <wall_time>1611025592 283956061</wall_time>
+    <iterations>76647</iterations>
+    <model name='1'>
+      <pose>-0.006692 0.277471 0.012507 3.12392 -0.245218 -1.44964</pose>
+      <scale>1 1 1</scale>
+      <link name='1'>
+        <pose>-0.006692 0.277471 0.012507 3.12392 -0.245218 -1.44964</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0.251059 0.239027 -0.233019 2.00826 1.48039 -1.90541</acceleration>
+        <wrench>0.12553 0.119514 -0.11651 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='2'>
+      <pose>-0.118911 -0.027608 0.011497 2.45084 -0.843451 2.32901</pose>
+      <scale>1 1 1</scale>
+      <link name='2'>
+        <pose>-0.118911 -0.027608 0.011497 2.45084 -0.843451 2.32901</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0.000561 0.003163 -0.006357 0.182757 -0.077767 0.040888</acceleration>
+        <wrench>0.000281 0.001581 -0.003178 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='3'>
+      <pose>-0.268056 0.044084 0.012529 -1.84302 -0.686093 0.885449</pose>
+      <scale>1 1 1</scale>
+      <link name='3'>
+        <pose>-0.268056 0.044084 0.012529 -1.84302 -0.686093 0.885449</pose>
+        <velocity>-0.001182 0.001716 0.001111 -0.115292 -0.033533 -0.028572</velocity>
+        <acceleration>-0.002729 0.004516 0.007041 0.174251 0.115626 0.076566</acceleration>
+        <wrench>-0.001364 0.002258 0.003521 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='4'>
+      <pose>-0.221544 -0.288503 0.127665 -1.19316 -1.3771 1.58614</pose>
+      <scale>1 1 1</scale>
+      <link name='4'>
+        <pose>-0.221544 -0.288503 0.127665 -1.19316 -1.3771 1.58614</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0.000497 -0.000454 -0.000205 -0.055673 0.026723 -0.003632</acceleration>
+        <wrench>0.000249 -0.000227 -0.000102 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='bin'>
+      <pose>0 0 0 0 -0 0</pose>
+      <scale>1 1 1</scale>
+      <link name='bottom'>
+        <pose>0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+      <link name='east_wall'>
+        <pose>0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+      <link name='north_wall'>
+        <pose>0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+      <link name='south_wall'>
+        <pose>0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+      <link name='west_wall'>
+        <pose>0 0 0 0 -0 0</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model>
+    <model name='photoneo_s_sensor'>
+      <pose>0 0 2 1.57079 1.57079 3.14159</pose>
+      <scale>1 1 1</scale>
+      <link name='link'>
+        <pose>0 0 2 1.57079 1.57079 3.14159</pose>
+        <velocity>0 0 0 0 -0 0</velocity>
+        <acceleration>0 0 0 0 -0 0</acceleration>
+        <wrench>0 0 0 0 -0 0</wrench>
+      </link>
+    </model>
+  </state>
+  <gui fullscreen='0'>
+    <camera name='user_camera'>
+      <pose>-3.0201 -7.50454 5.73115 0 1.15564 0.296202</pose>
+      <view_controller>orbit</view_controller>
+      <projection_type>perspective</projection_type>
+    </camera>
+  </gui>
+  <model name='bin'>
+    <static>1</static>
+    <link name='bottom'>
+      <collision name='collision-bottom'>
+        <pose>0 0 -0.01 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.8 0.6 0.02</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <collide_bitmask>65535</collide_bitmask>
+            <ode/>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <link name='west_wall'>
+      <collision name='collision-west_wall'>
+        <pose>-0.41 0 0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.6 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <collide_bitmask>65535</collide_bitmask>
+            <ode/>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <link name='east_wall'>
+      <collision name='collision-east_wall'>
+        <pose>0.41 0 0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.02 0.6 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <collide_bitmask>65535</collide_bitmask>
+            <ode/>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <link name='south_wall'>
+      <collision name='collision-south_wall'>
+        <pose>0 -0.31 0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.8 0.02 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <collide_bitmask>65535</collide_bitmask>
+            <ode/>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <link name='north_wall'>
+      <collision name='collision-north_wall'>
+        <pose>0 0.31 0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.8 0.02 0.2</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>100</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <collide_bitmask>65535</collide_bitmask>
+            <ode/>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+  </model>
+  <model name='1'>
+    <static>0</static>
+    <link name='1'>
+      <collision name='collision-cylinder-e_1_1_4'>
+        <pose>0.102237 -0.104151 0.024269 1.34186 0.762916 0.616474</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.295898</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_1_1_4'>
+        <pose>0.102237 -0.104151 0.024269 1.34186 0.762916 0.616474</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.295898</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_2_4_5'>
+        <pose>0.2166 -0.235383 0.031329 2.13687 0.361303 0.641926</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.068604</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_2_4_5'>
+        <pose>0.2166 -0.235383 0.031329 2.13687 0.361303 0.641926</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.068604</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_3_5_6'>
+        <pose>0.242642 -0.275287 0.004198 2.22938 0.709334 1.29317</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.042731</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_3_5_6'>
+        <pose>0.242642 -0.275287 0.004198 2.22938 0.709334 1.29317</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.042731</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_4_6_7'>
+        <pose>0.260132 -0.297325 -0.013213 2.25314 0.292301 0.599888</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.024804</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_4_6_7'>
+        <pose>0.260132 -0.297325 -0.013213 2.25314 0.292301 0.599888</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.024804</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_5_7_8'>
+        <pose>0.265461 -0.31762 -0.028572 2.18852 0.128508 0.248006</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.027403</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_5_7_8'>
+        <pose>0.265461 -0.31762 -0.028572 2.18852 0.128508 0.248006</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.027403</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_6_8_2'>
+        <pose>0.273241 -0.347135 -0.042362 1.88143 0.301589 0.410853</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.04056</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_6_8_2'>
+        <pose>0.273241 -0.347135 -0.042362 1.88143 0.301589 0.410853</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.04056</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-2'>
+        <pose>0.279265 -0.365573 -0.048281 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-2'>
+        <pose>0.279265 -0.365573 -0.048281 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-4'>
+        <pose>0.204475 -0.208301 0.048538 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-4'>
+        <pose>0.204475 -0.208301 0.048538 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-8'>
+        <pose>0.267217 -0.328697 -0.036443 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-8'>
+        <pose>0.267217 -0.328697 -0.036443 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-5'>
+        <pose>0.228726 -0.262465 0.01412 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-5'>
+        <pose>0.228726 -0.262465 0.01412 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-6'>
+        <pose>0.256558 -0.288109 -0.005724 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-6'>
+        <pose>0.256558 -0.288109 -0.005724 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-7'>
+        <pose>0.263705 -0.306542 -0.020702 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-7'>
+        <pose>0.263705 -0.306542 -0.020702 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0 0 1 1</ambient>
+        </material>
+      </visual>
+      <inertial>
+        <pose>0.160579 -0.177776 0.013362 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.002271</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.002144</iyy>
+          <iyz>0</iyz>
+          <izz>4.4e-05</izz>
+        </inertia>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <pose>-0.034621 0.235862 0.286638 0 -0 0</pose>
+  </model>
+  <model name='2'>
+    <static>0</static>
+    <link name='2'>
+      <collision name='collision-cylinder-e_1_1_4'>
+        <pose>0.013036 0.110824 0.041798 -1.21013 0.109621 -0.075854</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.238318</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_1_1_4'>
+        <pose>0.013036 0.110824 0.041798 -1.21013 0.109621 -0.075854</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.238318</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_2_4_5'>
+        <pose>0.027561 0.236885 0.08962 -1.19432 0.090572 -0.06161</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.032905</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_2_4_5'>
+        <pose>0.027561 0.236885 0.08962 -1.19432 0.090572 -0.06161</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.032905</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_3_5_6'>
+        <pose>0.063718 0.314786 0.13372 -1.02479 0.441671 -0.251231</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.162215</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_3_5_6'>
+        <pose>0.063718 0.314786 0.13372 -1.02479 0.441671 -0.251231</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.162215</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_4_6_7'>
+        <pose>0.117113 0.38577 0.181967 -0.685717 0.958874 -0.366985</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.045753</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_4_6_7'>
+        <pose>0.117113 0.38577 0.181967 -0.685717 0.958874 -0.366985</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.045753</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_5_7_2'>
+        <pose>0.145992 0.395544 0.19388 -0.694987 1.35099 -0.564883</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020809</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_5_7_2'>
+        <pose>0.145992 0.395544 0.19388 -0.694987 1.35099 -0.564883</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020809</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-2'>
+        <pose>0.156146 0.396997 0.195622 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-2'>
+        <pose>0.156146 0.396997 0.195622 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-7'>
+        <pose>0.135838 0.394092 0.192137 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-7'>
+        <pose>0.135838 0.394092 0.192137 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-6'>
+        <pose>0.098388 0.377449 0.171796 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-6'>
+        <pose>0.098388 0.377449 0.171796 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-5'>
+        <pose>0.029049 0.252123 0.095644 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-5'>
+        <pose>0.029049 0.252123 0.095644 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-4'>
+        <pose>0.026072 0.221647 0.083596 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-4'>
+        <pose>0.026072 0.221647 0.083596 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0 0 1</ambient>
+        </material>
+      </visual>
+      <inertial>
+        <pose>0.045492 0.2223 0.093923 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.001297</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000497</iyy>
+          <iyz>0</iyz>
+          <izz>-0.001619</izz>
+        </inertia>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <pose>0.097521 -0.204585 0.206077 0 -0 0</pose>
+  </model>
+  <model name='3'>
+    <static>0</static>
+    <link name='3'>
+      <collision name='collision-cylinder-e_1_1_4'>
+        <pose>0.03265 0.034547 -0.023155 -2.16126 0.665566 -1.14958</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.105749</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_1_1_4'>
+        <pose>0.03265 0.034547 -0.023155 -2.16126 0.665566 -1.14958</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.105749</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_2_4_5'>
+        <pose>0.123706 0.105608 -0.061432 -1.96345 0.975904 -1.34252</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.141041</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_2_4_5'>
+        <pose>0.123706 0.105608 -0.061432 -1.96345 0.975904 -1.34252</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.141041</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_3_5_6'>
+        <pose>0.250651 0.167459 -0.096447 -2.23638 1.13144 -1.83446</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.151463</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_3_5_6'>
+        <pose>0.250651 0.167459 -0.096447 -2.23638 1.13144 -1.83446</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.151463</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_4_6_7'>
+        <pose>0.328542 0.195243 -0.113773 -0.761848 1.20842 -0.539465</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020004</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_4_6_7'>
+        <pose>0.328542 0.195243 -0.113773 -0.761848 1.20842 -0.539465</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020004</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_5_7_8'>
+        <pose>0.344866 0.204969 -0.113464 -1.87145 0.740995 -0.970201</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020656</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_5_7_8'>
+        <pose>0.344866 0.204969 -0.113464 -1.87145 0.740995 -0.970201</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020656</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_6_8_9'>
+        <pose>0.359 0.218719 -0.111936 -1.0416 0.762584 -0.452083</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020739</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_6_8_9'>
+        <pose>0.359 0.218719 -0.111936 -1.0416 0.762584 -0.452083</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020739</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_7_9_10'>
+        <pose>0.373109 0.231589 -0.104434 -1.04459 0.753796 -0.448031</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020297</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_7_9_10'>
+        <pose>0.373109 0.231589 -0.104434 -1.04459 0.753796 -0.448031</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020297</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_8_10_2'>
+        <pose>0.386062 0.238769 -0.092729 -0.097457 0.642449 -0.032452</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020052</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_8_10_2'>
+        <pose>0.386062 0.238769 -0.092729 -0.097457 0.642449 -0.032452</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020052</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-2'>
+        <pose>0.392069 0.23955 -0.08474 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-2'>
+        <pose>0.392069 0.23955 -0.08474 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-10'>
+        <pose>0.380055 0.237988 -0.100718 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-10'>
+        <pose>0.380055 0.237988 -0.100718 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-9'>
+        <pose>0.366164 0.225191 -0.10815 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-9'>
+        <pose>0.366164 0.225191 -0.10815 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-4'>
+        <pose>0.0653 0.069095 -0.046309 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-4'>
+        <pose>0.0653 0.069095 -0.046309 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-8'>
+        <pose>0.351837 0.212247 -0.115721 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-8'>
+        <pose>0.351837 0.212247 -0.115721 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-5'>
+        <pose>0.182112 0.142121 -0.076555 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-5'>
+        <pose>0.182112 0.142121 -0.076555 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-6'>
+        <pose>0.319189 0.192796 -0.116339 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-6'>
+        <pose>0.319189 0.192796 -0.116339 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-7'>
+        <pose>0.337894 0.197691 -0.111208 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-7'>
+        <pose>0.337894 0.197691 -0.111208 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>0.003922 1 0.996078 1</ambient>
+        </material>
+      </visual>
+      <inertial>
+        <pose>0.190639 0.132152 -0.073282 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>-0.000262</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.000129</iyy>
+          <iyz>0</iyz>
+          <izz>-0.000834</izz>
+        </inertia>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <pose>-0.196709 -0.040692 0.373282 0 -0 0</pose>
+  </model>
+  <model name='4'>
+    <static>0</static>
+    <link name='4'>
+      <collision name='collision-cylinder-e_1_1_4'>
+        <pose>-0.004437 0.033771 -0.079842 -2.74145 -0.051134 0.250885</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.173608</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_1_1_4'>
+        <pose>-0.004437 0.033771 -0.079842 -2.74145 -0.051134 0.250885</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.173608</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_2_4_5'>
+        <pose>-0.019442 0.096764 -0.19954 -2.50892 -0.210671 0.624837</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.101077</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_2_4_5'>
+        <pose>-0.019442 0.096764 -0.19954 -2.50892 -0.210671 0.624837</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.101077</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_3_5_6'>
+        <pose>-0.044035 0.163371 -0.283644 -2.44009 -0.237551 0.630572</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.119199</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_3_5_6'>
+        <pose>-0.044035 0.163371 -0.283644 -2.44009 -0.237551 0.630572</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.119199</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_4_6_7'>
+        <pose>-0.052522 0.211632 -0.341233 -2.45753 0.311289 -0.830252</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.036165</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_4_6_7'>
+        <pose>-0.052522 0.211632 -0.341233 -2.45753 0.311289 -0.830252</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.036165</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_5_7_8'>
+        <pose>-0.043401 0.228094 -0.362286 -2.51494 0.359842 -1.02309</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020347</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_5_7_8'>
+        <pose>-0.043401 0.228094 -0.362286 -2.51494 0.359842 -1.02309</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020347</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_6_8_9'>
+        <pose>-0.031697 0.238233 -0.381449 -2.763 0.582735 -2.0046</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.029518</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_6_8_9'>
+        <pose>-0.031697 0.238233 -0.381449 -2.763 0.582735 -2.0046</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.029518</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-cylinder-e_7_9_2'>
+        <pose>-0.01519 0.240163 -0.397764 2.64674 0.987979 2.26441</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020086</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-cylinder-e_7_9_2'>
+        <pose>-0.01519 0.240163 -0.397764 2.64674 0.987979 2.26441</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.0125</radius>
+            <length>0.020086</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-2'>
+        <pose>-0.006805 0.237538 -0.402628 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-2'>
+        <pose>-0.006805 0.237538 -0.402628 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-9'>
+        <pose>-0.023575 0.242788 -0.3929 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-9'>
+        <pose>-0.023575 0.242788 -0.3929 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-4'>
+        <pose>-0.008873 0.067541 -0.159685 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-4'>
+        <pose>-0.008873 0.067541 -0.159685 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-1'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-8'>
+        <pose>-0.039819 0.233678 -0.369999 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-8'>
+        <pose>-0.039819 0.233678 -0.369999 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-5'>
+        <pose>-0.03001 0.125987 -0.239396 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-5'>
+        <pose>-0.03001 0.125987 -0.239396 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-6'>
+        <pose>-0.05806 0.200754 -0.327892 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-6'>
+        <pose>-0.05806 0.200754 -0.327892 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <collision name='collision-sphere-7'>
+        <pose>-0.046984 0.22251 -0.354573 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>1.16</mu>
+              <mu2>1.16</mu2>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode>
+              <kp>1e+06</kp>
+              <kd>1</kd>
+              <max_vel>0</max_vel>
+              <min_depth>0.001</min_depth>
+            </ode>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='visual-sphere-7'>
+        <pose>-0.046984 0.22251 -0.354573 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.0125</radius>
+          </sphere>
+        </geometry>
+        <material>
+          <ambient>1 0.65098 0.996078 1</ambient>
+        </material>
+      </visual>
+      <inertial>
+        <pose>-0.024015 0.118536 -0.213603 0 -0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+          <ixx>0.000854</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>-0.000265</iyy>
+          <iyz>0</iyz>
+          <izz>-0.000281</izz>
+        </inertia>
+      </inertial>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+    </link>
+    <pose>0.071204 -0.18984 0.513603 0 -0 0</pose>
+  </model>
+</world>
+</sdf>
