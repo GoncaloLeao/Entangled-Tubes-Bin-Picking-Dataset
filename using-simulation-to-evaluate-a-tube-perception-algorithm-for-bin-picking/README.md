@@ -20,9 +20,9 @@ Properties of each set of tubes:
 | Shape | Linear | Linear | With bifurcations (see image below) |
 | Curve length | 50 cm | 50 cm | Not applicable (see image below) |
 | Radius | 1.25 cm | 1.25 cm | 1.25 cm |
-| Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | Varies for each segment |
-| Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 5/10 | Varies for each segment |
-| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5&deg;/30&deg; | 5&deg;/45&deg; | Varies for each segment |
+| Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | Varies for each segment (see table below) |
+| Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 5/10 | Varies for each segment (see table below) |
+| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5&deg;/30&deg; | 5&deg;/45&deg; | Varies for each segment (see table below) |
 
 The tubes in set C have bifurcations. Their topology graph is presented below:
 
