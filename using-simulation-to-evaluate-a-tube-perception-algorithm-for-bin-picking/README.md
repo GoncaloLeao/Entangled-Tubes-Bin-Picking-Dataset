@@ -38,3 +38,24 @@ Each test case contains the following files:
 - a .ply (Polygon File Format) file with the unordered point cloud of the scene.
 - a .world (Gazebo SDF format) file with the description of the scene for Gazebo. These files can be opened in Gazebo.
 - a .txt file with the geometric description of the tubes. The structure of this file is as follows:
+
+```
+<number of tubes in the bin>
+<tube 1 description>
+<tube 2 description>
+...
+<tube N description>
+```
+
+Each tube is described as a graph (composed of nodes connected by edges). The format is as follows:
+```
+<ID> <number of nodes> <number of edges>
+<node 1 description>
+<node 2 description>
+...
+<node V description>
+<edge 1 description>
+<edge 2 description>
+...
+<edge E description>
+```
