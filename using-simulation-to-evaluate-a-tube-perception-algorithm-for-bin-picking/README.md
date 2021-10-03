@@ -25,6 +25,7 @@ Properties of each set of tubes:
 | Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5&deg;/30&deg; | 5&deg;/45&deg; | Varies for each segment |
 
 The tubes in set C have bifurcations. Their topology graph is presented below:
+
 ![Set C topology graph](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/master/using-simulation-to-evaluate-a-tube-perception-algorithm-for-bin-picking/set-c-topology.png)
 
 Properties of each segment of the tubes in set C:
