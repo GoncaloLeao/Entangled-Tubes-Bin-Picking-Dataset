@@ -47,7 +47,7 @@ Each test case contains the following files:
 <tube N description>
 ```
 
-Each tube is described as a graph (composed of nodes connected by edges). The format is as follows:
+Each tube is described as a "pseudo-graph". Each node is associated with a bifurcation or endpoint. In the simulated environment, each node represents a sphere, while each edge represents a cylinder. Please note that, unlike, "conventional graphs" where *ONE* edge connects two nodes, in this representation, there is an ordered set of edges connecting node A to node B, since there are multiple cylinder connecting two endpoints/bifurcations. The "order" of each of the P edges in the "path" connecting two nodes is given by the "order" property (which ranges from 1 to P). The nodes' radii is the same as the cylinder's radii since all of the datasets contain tubes with constant radii throughout their length. The format for a tube description is as follows:
 ```
 <ID> <number of nodes> <number of edges>
 <node 1 description>
@@ -58,4 +58,14 @@ Each tube is described as a graph (composed of nodes connected by edges). The fo
 <edge 2 description>
 ...
 <edge E description>
+```
+
+Each node (sphere) is described as follows:
+```
+<ID> <center X coordinate> <center X coordinate> <center X coordinate> <sphere radius>
+```
+
+Each edge (cylinder) is described as follows:
+```
+<ID> <node 1 ID> <node 2 ID> <order> <center X coordinate> <center Y coordinate> <center Z coordinate> <axis orientation vector X component> <axis orientation vector Y component> <axis orientation vector Z component> <length>
 ```
