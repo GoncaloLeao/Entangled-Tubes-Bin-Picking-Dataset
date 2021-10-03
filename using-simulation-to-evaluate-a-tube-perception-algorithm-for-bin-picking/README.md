@@ -18,7 +18,7 @@ Properties of each set of tubes:
 | | Set A | Set B | Set C |
 | --- | --- | --- | --- |
 | Shape | Linear | Linear | With bifurcations (see image below) |
-| Curve length | 50 cm | 50 cm | not applicable (see image below) |
+| Curve length | 50 cm | 50 cm | Not applicable (see image below) |
 | Radius | 1.25 cm | 1.25 cm | 1.25 cm |
 | Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | Varies for each segment |
 | Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 5/10 | Varies for each segment |
