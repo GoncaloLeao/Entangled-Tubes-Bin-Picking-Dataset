@@ -22,7 +22,18 @@ Properties of each set of tubes:
 | Radius | 1.25 cm | 1.25 cm | 1.25 cm |
 | Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | Varies for each segment |
 | Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 5/10 | Varies for each segment |
-| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5º/30º | 5º/45º | Varies for each segment |
+| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5&deg;/30&deg; | 5&deg;/45&deg; | Varies for each segment |
+
+The tubes in set C have bifurcations. Their topology graph is presented below:
+![Set C topology graph](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/master/using-simulation-to-evaluate-a-tube-perception-algorithm-for-bin-picking/set-c-topology.png)
+
+Properties of each segment of the tubes in set C:
+| | Edge_1_2 | Edge_1_3 | Edge_1_4 | Edge 2_5 | Edge 2_6 |
+| --- | --- | --- | --- | --- | --- |
+| Length | 30 cm | 10 cm | 10 cm | 10 cm | 15 cm |
+| Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | 2 cm | 2 cm | 2 cm |
+| Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 2/5 | 2/5 | 2/5 | 2/6 |
+| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 0&deg;/20&deg; | 0&deg;/20&deg; | 0&deg;/20&deg; | 0&deg;/20&deg; | 0&deg;/20&deg; |
 
 Within each of the main directories, there are three subdirectories, which contain each the test cases in a different format (refer to the "File formats" section below). Within the three subdirectories, there are 20 files, each one corresponding at a distinct test case. The name of these files refers to the test case ID.
 
