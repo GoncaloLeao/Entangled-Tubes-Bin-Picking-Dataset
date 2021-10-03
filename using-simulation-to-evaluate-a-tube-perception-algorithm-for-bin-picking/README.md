@@ -14,6 +14,16 @@ Each of the main directories refers to a collection of test cases with the same 
 - X is the identifier of the set ("A", "B" or "C")
 - Y is the number of tubes in the bin
 
+Properties of each set of tubes:
+| | Set A | Set B | Set C |
+| --- | --- | --- | --- |
+| Shape | Linear | Linear | With bifurcations (see image below) |
+| Curve length | 50 cm | 50 cm | not applicable (see image below) |
+| Radius | 1.25 cm | 1.25 cm | 1.25 cm |
+| Min cylinder length (cl<sub>min</sub>) | 2 cm | 2 cm | Varies for each segment |
+| Min/max number of cylinders (cn<sub>min</sub>, cn<sub>max</sub>) | 5/10 | 5/10 | Varies for each segment |
+| Min/max angle between consecutive cylinders (θ<sub>min</sub>, θ<sub>max</sub>) | 5º/30º | 5º/45º | Varies for each segment |
+
 Within each of the main directories, there are three subdirectories, which contain each the test cases in a different format (refer to the "File formats" section below). Within the three subdirectories, there are 20 files, each one corresponding at a distinct test case. The name of these files refers to the test case ID.
 
 # Terms of use
