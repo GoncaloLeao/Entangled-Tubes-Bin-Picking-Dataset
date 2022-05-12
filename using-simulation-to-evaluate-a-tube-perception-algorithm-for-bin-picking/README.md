@@ -48,7 +48,7 @@ G. Leão, C. M. Costa, A. Sousa, L. P. Reis, and G. Veiga, “Using Simulation t
 
 (Bibtex citation)
 ```
-@article{leao2022using,
+@article{leao2022,
   title={Using Simulation to Evaluate a Tube Perception Algorithm for Bin Picking},
   author={Le{\~a}o, Gon{\c{c}}alo and Costa, Carlos M and Sousa, Armando and Reis, Lu{\'\i}s Paulo and Veiga, Germano},
   journal={Robotics},
