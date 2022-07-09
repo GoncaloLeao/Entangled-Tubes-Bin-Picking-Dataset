@@ -43,12 +43,22 @@ Over and above the legal restrictions of the license, this dataset is for resear
 
 (IEEE citation format)
 ```
-(Awaiting publication)
+G. Leão, C. M. Costa, A. Sousa, L. P. Reis, and G. Veiga, “Using Simulation to Evaluate a Tube Perception Algorithm for Bin Picking”, Robotics, vol. 11, no. 2, p. 46, Apr. 2021.
 ```
 
 (Bibtex citation)
 ```
-(Awaiting publication)
+@article{leao2022,
+  title={Using Simulation to Evaluate a Tube Perception Algorithm for Bin Picking},
+  author={Le{\~a}o, Gon{\c{c}}alo and Costa, Carlos M and Sousa, Armando and Reis, Lu{\'\i}s Paulo and Veiga, Germano},
+  journal={Robotics},
+  volume={11},
+  number={2},
+  pages={46},
+  year={2022},
+  month={Apr},
+  publisher={MDPI}
+}
 ```
 
 # File formats
