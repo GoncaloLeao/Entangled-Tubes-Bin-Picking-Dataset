@@ -1,17 +1,6 @@
 :- include(tubes).
-%:- include(test_1_10tubes_0_10_and_35_45_9_cases).
-%:- include(test_15tubes_0_10_and_35_45_10_case).
-%:- include(test_1_10tubes_10_20_and_25_35_10_case).
 
 :- include(test_set_c).
-
-% Training set = /home/p1234/Documents/TAECAC/proj/examples_only_1_10tubes_0_10_and_35_45_1_case.pl
-
-%join(A,B,C) :-
-   %get_all_node_ids(A,B,D), filter_angular_distance(D,A,B,[30.0],E), select_closest_node(E,A,B,[2],C), !.
-
-%join(A,B,C) :-
-   %get_all_node_ids(A,B,D), precond_cylinder_shorter_than(A,B,[0.05]), select_closest_node(D,A,B,[2],C), !.
 
 join(A,B,C) :-
    get_all_node_ids(A,B,D), filter_angular_distance(D,A,B,[30.0],E), select_closest_node(E,A,B,[0.002],C), !.

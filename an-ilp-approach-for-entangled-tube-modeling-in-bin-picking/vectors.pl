@@ -23,7 +23,6 @@ vec_dot_product_aux([X1|X1s],[X2|X2s],Acc,P):-
 	Acc1 is Acc + X1*X2,
 	vec_dot_product_aux(X1s,X2s,Acc1,P).
 	
-% Reference: https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
 vec_2D_cross_product([X1,Y1],[X2,Y2],P):-
 	P is X1*Y2 - X2*Y1.
 	
@@ -31,7 +30,8 @@ vec_3D_cross_product([X1,Y1,Z1],[X2,Y2,Z2],[Px,Py,Pz]):-
 	Px is Y1*Z2 - Z1*Y2,
 	Py is Z1*X2 - X1*Z2,
 	Pz is X1*Y2 - Y1*X2.
-	
+
+% Reference: https://stackoverflow.com/questions/563198/how-do-you-detect-where-two-line-segments-intersect
 % yUpRayIntersectsSegments(+Point,+SegmentStartingPoint,+SegmentEndingPoint).
 yUpRayIntersectsSegments([Px,Py],[Ax,Ay],[Bx,By]):-
 	PAx is Px - Ax,
@@ -72,4 +72,3 @@ isPointInsidePolygon_aux([[A,B]|Ls],P,Acc,Ct):-
 % _Poly = [[0,0],[1,0],[1.5,0.5],[0.5,0.5]], isPointInsidePolygon([0,0],_Poly).
 % _Poly = [[0,0],[1,0],[1.5,0.5],[0.5,0.5]], isPointInsidePolygon([0.5,0.25],_Poly).
 % _Poly = [[0,0],[1,0],[1.5,0.5],[0.5,0.5]], isPointInsidePolygon([0.5,0.75],_Poly).
-	

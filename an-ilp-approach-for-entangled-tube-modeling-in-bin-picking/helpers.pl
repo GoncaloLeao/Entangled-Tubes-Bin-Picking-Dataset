@@ -10,8 +10,6 @@ lemma(P):-
 		asserta((P :- !))
 	).
 
-% TODO: Pré-calcular distâncias em vez de usar lemma, pois preds stats são mais rápidos que dynamic.
-
 % get_node(+Nodes,+NodeID).
 get_node(Nodes,NodeID):-
 	member(node(NodeID,_,_,_),Nodes).
@@ -119,8 +117,7 @@ get_cylinder_2D_polygon([X1,Y1,Z1],[X2,Y2,Z2],Radius,[[P1x,P1y],[P2x,P2y],[P3x,P
 	P3y is Y2 + RVy * Radius,
 	P4x is X2 - RVx * Radius,
 	P4y is Y2 - RVy * Radius.
-	
-% TODO: Set Coef = (max_euclid/max_angular)??
+
 % dist = Euclidean distance + (max_euclid/max_angular) * angular distance 
 
 % dist(+ExampleID,+NdID1,+NdID2,+Coef,-D)

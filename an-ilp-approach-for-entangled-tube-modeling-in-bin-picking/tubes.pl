@@ -1,18 +1,3 @@
-% Simple illustration of positive-only learning within Aleph
-% To run do the following:
-%       a. Load Aleph
-%       b. read_all(animals).
-%       c. sat(1).
-%       d. reduce.
-%	or
-%       a. Load Aleph
-%       b. read_all(animals).
-%       c. induce.
-
-/** <examples>
-?- induce(Program).
-*/
-
 :-use_module(library(aleph)).
 :- if(current_predicate(use_rendering/1)).
 :- use_rendering(prolog).
@@ -42,8 +27,6 @@
 :- modeh(*,join(+example_id,+node_id,-node_id)).
 
 :- modeb(1,get_all_node_ids(+example_id,+node_id,-node_id_list)).
-%:- modeb(*,precond_ntubes_leq(+example_id,+node_id,#params_list)).
-%:- modeb(*,precond_ntubes_gt(+example_id,+node_id,#params_list)).
 :- modeb(*,precond_cylinder_len_leq(+example_id,+node_id,#params_list)).
 :- modeb(*,precond_cylinder_len_gt(+example_id,+node_id,#params_list)).
 :- modeb(*,precond_avg_angle_leq(+example_id,+node_id,#params_list)).
@@ -54,8 +37,6 @@
 :- modeb(*,select_closest_node(+node_id_list,+example_id,+node_id,#params_list,-node_id)).
 
 :- determination(join/3,get_all_node_ids/3).
-%:- determination(join/3,precond_ntubes_leq/3).
-%:- determination(join/3,precond_ntubes_gt/3).
 :- determination(join/3,precond_cylinder_len_leq/3).
 :- determination(join/3,precond_cylinder_len_gt/3).
 :- determination(join/3,precond_avg_angle_leq/3).
@@ -259,53 +240,11 @@ refine((join(ExampleID,Node1ID,Node2ID):-get_all_node_ids(ExampleID,Node1ID,IDs)
 	Order1 < Order2,
 	F11 =.. [FilterName1,IDs1,ExampleID,Node1ID,Params,IDs2],
 	F2 =.. [FilterName2,IDs2,ExampleID,Node1ID,_,FilteredIDs].
-/*
-% Add a precondition
-refine((join(ExampleID,Node1ID,Node2ID):-get_all_node_ids(ExampleID,IDs), PrecondsAndSelector), (join(ExampleID,Node1ID,Node2ID):-get_all_node_ids(ExampleID,IDs), NewPrecondsAndSelector)):-
-	comma_vals_to_list_except_last(PrecondsAndSelector,Preconds),
-	findall(PrecondName-Params,(member(P,Preconds),functor(P,PrecondName,_),precond_order(PrecondName,_),arg(3,P,Params)),PrecondNames),
-	addPrecond(PrecondNames,IDs,0,ExampleID,Node1ID,Node2ID,NewPrecondsAndSelector).
-% Add a filter
-refine((join(ExampleID,Node1ID,Node2ID):-get_all_node_ids(ExampleID,IDs), Body), (join(ExampleID,Node1ID,Node2ID):-get_all_node_ids(ExampleID,IDs), NewBody)):-
-	comma_vals_to_list_except_last(Body,PrecondsAndFilters),
-	findall(Name-Params,(member(P,PrecondsAndFilters),functor(P,Name,_),precond_order(Name,_),arg(3,P,Params)),Preconds),
-	findall(Name-Params,(member(P,PrecondsAndFilters),functor(P,Name,_),filter_order(Name,_),arg(4,P,Params)),Filters),
-	append(Preconds,Filters,Names),
-	addFilter(Names,IDs,0,ExampleID,Node1ID,Node2ID,NewBody).
 
-comma_vals_to_list_except_last((A,B),[A|T]):-
-	!,
-	comma_vals_to_list_except_last(B,T).
-comma_vals_to_list_except_last(_,[]).
-
-addPrecond([],IDs,LastOrder,ExampleID,Node1ID,Node2ID,(Precond,select_closest_node(IDs,ExampleID,Node1ID,_,Node2ID))):-
-	precond_order(PrecondName,Order),
-	Order > LastOrder,
-	Precond =.. [PrecondName,ExampleID,Node1ID,_].
-addPrecond([PrecondName-Params|PrecondNames],IDs,_,ExampleID,Node1ID,Node2ID,(Precond,NewBody)):-
-	precond_order(PrecondName,LastOrder1),
-	Precond =.. [PrecondName,ExampleID,Node1ID,Params],
-	addPrecond(PrecondNames,IDs,LastOrder1,ExampleID,Node1ID,Node2ID,NewBody).
-
-addFilter([],IDs,LastOrder,ExampleID,Node1ID,Node2ID,(Filter,select_closest_node(FilteredIDs,ExampleID,Node1ID,_,Node2ID))):-
-	filter_order(FilterName,Order),
-	Order > LastOrder,
-	Filter =.. [FilterName,IDs,ExampleID,Node1ID,_,FilteredIDs].
-addFilter([FilterName-Params|Names],IDs,_,ExampleID,Node1ID,Node2ID,(Filter,NewBody)):-
-	filter_order(FilterName,LastOrder1),
-	Filter =.. [FilterName,IDs,ExampleID,Node1ID,Params,FilteredIDs],
-	addFilter(Names,FilteredIDs,LastOrder1,ExampleID,Node1ID,Node2ID,NewBody).
-addFilter([PrecondName-Params|Names],IDs,_,ExampleID,Node1ID,Node2ID,(Precond,NewBody)):-
-	precond_order(PrecondName,LastOrder1),
-	Precond =.. [PrecondName,ExampleID,Node1ID,Params],
-	addFilter(Names,IDs,LastOrder1,ExampleID,Node1ID,Node2ID,NewBody).
-*/
-%precond_order(precond_ntubes_leq,1).
-%precond_order(precond_ntubes_gt,1).
-precond_order(precond_cylinder_len_leq,2).
-precond_order(precond_cylinder_len_gt,2).
-precond_order(precond_avg_angle_leq,3).
-precond_order(precond_avg_angle_gt,3).
+precond_order(precond_cylinder_len_leq,1).
+precond_order(precond_cylinder_len_gt,1).
+precond_order(precond_avg_angle_leq,2).
+precond_order(precond_avg_angle_gt,2).
 
 filter_order(filter_faraway_points,11).
 filter_order(filter_angular_distance,12).
@@ -319,19 +258,7 @@ get_all_node_ids(ExampleID,NodeID1,IDs):-
 	findall(ID,(tube_node(ExampleID,ID,_,_,_),ID \= NodeID1),IDs).
 
 % Preconditions
-/*
-% precond_ntubes_leq(+ExampleID,+NodeID1,-Params).
-precond_ntubes_leq(ExampleID,_,[MaxTubes]):-
-	n_tubes(ExampleID,NTubes),
-	generate_n_tubes(MaxTubes),
-	NTubes =< MaxTubes.
-	
-% precond_ntubes_gt(+ExampleID,+NodeID1,-Params).
-precond_ntubes_gt(ExampleID,_,[MaxTubes]):-
-	n_tubes(ExampleID,NTubes),
-	generate_n_tubes(MaxTubes),
-	NTubes > MaxTubes.
-*/	
+
 precond_cylinder_len_leq(ExampleID,NodeID1,[MaxLength]):-
 	generate_cylinder_length(MaxLength),
 	cylinder_length(ExampleID,NodeID1,Length),
@@ -414,12 +341,6 @@ select_closest_node_aux([ID|IDs],ExampleID,NodeID1,W,AccDist-AccID,BestDist-Best
 
 
 % Generators
-
-% generate_n_tubes(-NTubes).
-%generate_n_tubes(NTubes):-
-%	between(5,5,NTubes).
-	
-%generate_n_tubes(1).
 
 % generate_cylinder_length(-Length).	
 %generate_cylinder_length(Length):-
