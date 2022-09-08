@@ -24,4 +24,10 @@ TBA
 TBA
 ```
 
-# 
+# Prerequisites
+
+In order to form ILP with this repository's files, the following software is needed:
+- SWI-Prolog, the Prolog interpreter
+- Aleph, the ILP engine
+
+All these software elements are free.
