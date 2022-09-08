@@ -88,6 +88,14 @@ The induced theory (set of Prolog rules) is below the ```[theory]``` tag. In thi
 Under ```[Training set performance]```, a set of results are depicted, including the resulting confusion matrix of applying the induced theory to the training set, the accuract and the training time.
 
 After this first training example, multiple elements can be changed, namely:
-- Aleph's parameters: by changing the values in the ```aleph_set```
+- Aleph's parameters: by changing the values in the ```aleph_set/2``` terms at the beginning of ```tubes.pl```.
+- the predictes used to build the rules ("building-block predicates"): by adding/removing/modifying the ```modeb/2``` and ```determination/2``` terms in ```tubes.pl```, and the respective definition of the building-block predicates, which are also in ```tubes.pl```.
 
 ## Testing 
+
+To test the predictive performance of a theory in a test set, the ```test.pl``` file needs to be modified.
+
+First, the second ```include/1``` directive must be modified to match the name of the testing file. This repository contains four files usable for testing: 
+```test_training_set.pl```, ```test_set_a```, ```test_set_b``` and ```test_set_c```. The ```test_training_set.pl``` file is used to test the, if the user so wishes (it is a modified version of ```training_set.pl``` without some directives used for training). Do not include the ```.pl``` extention inside the ```include/1``` directive.
+
+
