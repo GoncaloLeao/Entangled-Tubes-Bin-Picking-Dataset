@@ -41,7 +41,7 @@ Optionally, for Ubuntu, it is recommended to install [rlwrap](https://github.com
 All these software elements are free.
 
 It is strongly recomended to read [Aleph's manual](https://www.di.ubi.pt/~jpaulo/competence/tutorials/aleph.pdf) to understand how ILP works and, specially, to learning about Aleph's parameters. The scientific paper associated with this repository illustrated in the results section how Aleph's parameters have a huge impact on the result, both in terms of:
-- the quality/predictive value of the induced theory;
+- the quality/predictive performance of the induced theory;
 - the training time.
 
 # Instructions
