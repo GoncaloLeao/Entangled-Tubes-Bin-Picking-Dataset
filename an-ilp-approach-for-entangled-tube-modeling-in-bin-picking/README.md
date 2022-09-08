@@ -27,7 +27,7 @@ TBA
 # Prerequisites
 
 In order to form ILP with this repository's files, the following software is needed:
-- SWI-Prolog, the Prolog interpreter
+- [SWI-Prolog, the Prolog interpreter](https://github.com/SWI-Prolog/swipl-devel);
 - Aleph, the ILP engine. The [port of Aleph for SWI-Prolog by Fabrizio Riguzzi](https://github.com/friguzzi/aleph) is recomended.
 
 All these software elements are free.
