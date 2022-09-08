@@ -44,12 +44,31 @@ For both training and testing, we begin by opening SWI-Prolog:
 swipl
 ```
 
-If rlwrap is installed, we can open SWI with rlwrap to be able to scroll back to older commands by pressing the "up key":
+Alternatively, if rlwrap is installed, we can open SWI with rlwrap to be able to scroll back to older commands by pressing the "up key":
 
 ```
 rlwrap swipl
 ```
 
+For both training and testing, the user should be within the SWI-Prolog console.
+
 ## Training
+
+First, tubes.pl is consulted (i.e. imported), to load all the parameters for Aleph and the definition of the predicates to be used to build rules/theories. This source file imports the aleph module.
+```
+consult('tubes.pl').
+```
+
+Then, the training set is imported:
+```
+consult('training_set.pl').
+```
+
+Finally, the ILP engine can be executed:
+```
+induce.
+```
+
+
 
 ## Testing 
