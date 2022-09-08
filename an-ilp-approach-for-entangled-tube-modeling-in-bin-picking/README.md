@@ -109,6 +109,6 @@ test.
 
 If this repository's version of ```test.pl``` is used without any modifications, the user should see a result as depicted below:
 
+![Testing output](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/testing.png?raw=true)
+
 The user can freely modify the code of ```test/0``` to include other metrics to measure the predictive performance.
-
-
