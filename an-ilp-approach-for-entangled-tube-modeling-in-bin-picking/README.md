@@ -62,12 +62,12 @@ For both training and testing, the user should be within the SWI-Prolog console.
 
 ## Training
 
-First, tubes.pl is consulted (i.e. imported), to load all the parameters for Aleph and the definition of the predicates to be used to build rules/theories. This source file imports the aleph module.
+First, tubes.pl is consulted (i.e. imported), to load all the parameters for Aleph, the definition of the predicates to be used to build rules/theories. This source file imports the aleph module.
 ```
 consult('tubes.pl').
 ```
 
-Then, the training set is imported:
+Then, the training set is imported. This file contains the positive and negative examples for training:
 ```
 consult('training_set.pl').
 ```
@@ -88,6 +88,6 @@ The induced theory (set of Prolog rules) is below the ```[theory]``` tag. In thi
 Under ```[Training set performance]```, a set of results are depicted, including the resulting confusion matrix of applying the induced theory to the training set, the accuract and the training time.
 
 After this first training example, multiple elements can be changed, namely:
-- Aleph's parameters: these par
+- Aleph's parameters: by changing the values in the ```aleph_set```
 
 ## Testing 
