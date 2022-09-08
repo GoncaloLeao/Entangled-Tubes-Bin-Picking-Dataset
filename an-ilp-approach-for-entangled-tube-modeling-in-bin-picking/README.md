@@ -38,7 +38,7 @@ All these software elements are free.
 
 # Instructions
 
-For both training and testing, we begin by opening SWI-Prolog:
+For both training and testing, we begin by opening SWI-Prolog in the console while inside the root folder of this repository:
 
 ```
 swipl
