@@ -32,7 +32,7 @@ In order to form ILP with this repository's files, the following software is nee
 - [SWI-Prolog](https://github.com/SWI-Prolog/swipl-devel), the Prolog interpreter;
 - Aleph, the ILP engine. The [port of Aleph for SWI-Prolog by Fabrizio Riguzzi](https://github.com/friguzzi/aleph) is recomended.
 
-Optionally, for Ubuntu, it is recommended to install ``rlwrap'', so that the user can go back to older commands/queries within SWI-Prolog's console.
+Optionally, for Ubuntu, it is recommended to install [rlwrap](https://github.com/hanslub42/rlwrap), so that the user can go back to older commands/queries within SWI-Prolog's console.
 
 All these software elements are free.
 
