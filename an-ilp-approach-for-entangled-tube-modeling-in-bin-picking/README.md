@@ -67,7 +67,7 @@ First, tubes.pl is consulted (i.e. imported), to load all the parameters for Ale
 consult('tubes.pl').
 ```
 
-Then, the training set is imported. This file contains the positive and negative examples for training:
+Then, the training set is imported. This file contains the background knowledge (ex: number of tubes in a test case), positive and negative examples for all the test cases used for training:
 ```
 consult('training_set.pl').
 ```
