@@ -26,8 +26,18 @@ TBA
 
 # Prerequisites
 
+This tutorial was tested in Ubuntu 18.04, but it should also work on other Linux operating systems and on Windows.
+
 In order to form ILP with this repository's files, the following software is needed:
-- [SWI-Prolog, the Prolog interpreter](https://github.com/SWI-Prolog/swipl-devel);
+- [SWI-Prolog](https://github.com/SWI-Prolog/swipl-devel), the Prolog interpreter;
 - Aleph, the ILP engine. The [port of Aleph for SWI-Prolog by Fabrizio Riguzzi](https://github.com/friguzzi/aleph) is recomended.
 
+Optionally, for Ubuntu, it is recommended to install ``rlwrap'', so that the user can go back to older commands/queries within SWI-Prolog's console.
+
 All these software elements are free.
+
+# Instructions
+
+## Training
+
+## Testing 
