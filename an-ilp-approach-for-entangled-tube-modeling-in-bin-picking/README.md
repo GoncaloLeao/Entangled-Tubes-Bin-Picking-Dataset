@@ -69,6 +69,11 @@ Finally, the ILP engine can be executed:
 induce.
 ```
 
+The user then needs to be patient while the training is being performed. If the files of this repository are used without modification, training time should take around 20-30 seconds (tested on a Intel Core i7-8750H processor, with 2.20 GHz). Meanwhile, a lot of text is printed in the console with the results of the training process.
+
+In the end, the user should see a result as depicted below:
+
+
 
 
 ## Testing 
