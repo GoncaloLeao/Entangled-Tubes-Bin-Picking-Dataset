@@ -38,6 +38,18 @@ All these software elements are free.
 
 # Instructions
 
+For both training and testing, we begin by opening SWI-Prolog:
+
+```
+swipl
+```
+
+If rlwrap is installed, we can open SWI with rlwrap to be able to scroll back to older commands by pressing the "up key":
+
+```
+rlwrap swipl
+```
+
 ## Training
 
 ## Testing 
