@@ -4,7 +4,7 @@ This dataset was used in "An Inductive Logic Programming Approach for Entangled 
 
 # Terms of use
 
-Over and above the legal restrictions of the license, this dataset is for research purposes only. When using this dataset, namely when writing a research paper or article, the End User shall reference the following scientific paper:
+Over and above the legal restrictions of the license, this dataset is for research and educational purposes only. When using this dataset, namely when writing a research paper or article, the End User shall reference the following scientific paper:
 
 (IEEE citation format)
 ```
