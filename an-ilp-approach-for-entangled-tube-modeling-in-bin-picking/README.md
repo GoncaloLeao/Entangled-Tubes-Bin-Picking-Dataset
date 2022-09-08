@@ -79,6 +79,9 @@ In the end, the user should see a result as depicted below:
 
 ![Training output](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/training.png?raw=true)
 
+The induced theory (set of Prolog rules) is below the ```[theory]``` tag. In this case, the theory contains three rules. 
+
+Under ```[training set performance]```, a set of results are depicted, including the resulting confusion matrix of applying the induced theory to the training set, the accuract and the training time.
 
 
 ## Testing 
