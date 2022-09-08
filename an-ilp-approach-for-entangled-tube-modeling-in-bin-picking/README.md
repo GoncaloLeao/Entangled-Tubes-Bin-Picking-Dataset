@@ -4,11 +4,15 @@ This dataset was used in "An Inductive Logic Programming Approach for Entangled 
 
 In bin picking scenarios, a robotic arm must remove, one-by-one, a set of randomly assorted items from a container. This is specially challenging of the items are prone to be entangled, such as when they are shaped like curved tubes (which is the case of this here). In order for the robot to determine the next item to pick and how it should grasp it, it is useful for the robot to have a model of the items contained in the bin.
 
-A set of entangled tubes can be modeled as a linked list of cylinders. The modeling algorithm proposed in [previous work](https://link.springer.com/chapter/10.1007/978-3-030-35990-4_50) reads a point cloud captured by a 3D scanner facing towards the inside of a bin to construct a model of the items inside it. This algorithm fits a set of cylinders to the point cloud and then combines them to form the linked lists, as shown below.
+A set of entangled tubes can be modeled as a linked list of cylinders. The modeling algorithm proposed in conference paper in [previous work](https://link.springer.com/chapter/10.1007/978-3-030-35990-4_50) reads a point cloud captured by a 3D scanner facing towards the inside of a bin to construct a model of the items inside it. This algorithm fits a set of cylinders to the point cloud and then combines them to form the linked lists, as shown below.
 
 ![Step-by-step example of the tube modeling algorithm](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/modeling-example.png?raw=true)
 
-The goal is to use ILP to learn how these cylinders should be combined.
+A simple strategy explored in previous work to combine the cylinders is to combine the closest pairs of cylinders first (greedy approach). The scientific paper from the previous work presents this strategy in further detail.
+
+![Step-by-step joining of the cylinders beloning to two tubes using a greedy strategy](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/tube-joining-steps.png?raw=true)
+
+The goal is to use ILP to learn alternative ways of how these cylinders should be combined. These alternative methods can provide more accurate models, since the greedy strategy above may produce incorrect pairings of cylinders. For instance, cylinders from two different tubes can be joined, tricking the robot into thinking it is seeing a single, long tube, rather than two shorted tubes.
 
 # Terms of use
 
@@ -74,6 +78,7 @@ The user then needs to be patient while the training is being performed. If the 
 In the end, the user should see a result as depicted below:
 
 ![Training output](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/training.png?raw=true)
+
 
 
 ## Testing 
