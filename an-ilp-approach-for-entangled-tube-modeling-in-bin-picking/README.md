@@ -83,7 +83,7 @@ In the end, the user should see a result as depicted below:
 
 ![Training output](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/training.png?raw=true)
 
-The induced theory (set of Prolog rules) is below the ```[theory]``` tag. In this case, the theory contains three rules. 
+The induced theory (set of Prolog rules) is below the ```[theory]``` tag. In this case, the theory contains three rules. After learning a theory, it is recomended to save all of this output in a file, namely the Prolog code of the theory.
 
 Under ```[Training set performance]```, a set of results are depicted, including the resulting confusion matrix of applying the induced theory to the training set, the accuract and the training time.
 
@@ -97,5 +97,18 @@ To test the predictive performance of a theory in a test set, the ```test.pl``` 
 
 First, the second ```include/1``` directive must be modified to match the name of the testing file. This repository contains four files usable for testing: 
 ```test_training_set.pl```, ```test_set_a```, ```test_set_b``` and ```test_set_c```. The ```test_training_set.pl``` file is used to test the, if the user so wishes (it is a modified version of ```training_set.pl``` without some directives used for training). Do not include the ```.pl``` extention inside the ```include/1``` directive.
+
+Secondly, right below the second ```include/1``` directive, the rules for ```join/3``` should be replaced with the code for the theory to be tested.
+
+Finally, inside the SWI-Prolog console, the ```test.pl``` file is imported and the ```test/0``` predicate is called.
+
+```
+consult('test.pl').
+test.
+```
+
+If this repository's version of ```test.pl``` is used without any modifications, the user should see a result as depicted below:
+
+The user can freely modify the code of ```test/0``` to include other metrics to measure the predictive performance.
 
 
