@@ -6,7 +6,7 @@ In bin picking scenarios, a robotic arm must remove, one-by-one, a set of random
 
 A set of entangled tubes can be modeled as a linked list of cylinders. The modeling algorithm proposed in previous work reads a point cloud captured by a 3D scanner facing towards the inside of a bin to construct a model of the items inside it. This algorithm fits a set of cylinders to the point cloud and then combines them to form the linked lists, as shown below.
 
-TODO: image
+![Step-by-step example of the tube modeling algorithm](https://www.researchgate.net/profile/Goncalo-Leao/publication/359745643/figure/fig2/AS:1142284020137984@1649353141616/An-example-of-the-result-of-each-step-of-the-tube-modeling-solution_W640.jpg)
 
 The goal is to use ILP to learn how these cylinders should be combined.
 
