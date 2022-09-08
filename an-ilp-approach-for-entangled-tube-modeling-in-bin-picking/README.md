@@ -12,7 +12,7 @@ A simple strategy explored in previous work to combine the cylinders is to combi
 
 ![Step-by-step joining of the cylinders beloning to two tubes using a greedy strategy](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/tube-joining-steps.png?raw=true)
 
-The goal is to use ILP to learn alternative ways of how these cylinders should be combined. These alternative methods can provide more accurate models, since the greedy strategy above may produce incorrect pairings of cylinders. For instance, cylinders from two different tubes can be joined, tricking the robot into thinking it is seeing a single, long tube, rather than two shorted tubes.
+The goal is to use ILP to learn alternative ways of how these cylinders should be combined (i.e. to perform the last step of the first image). These alternative methods can provide more accurate models, since the greedy strategy above may produce incorrect pairings of cylinders. For instance, cylinders from two different tubes can be joined, tricking the robot into thinking it is seeing a single, long tube, rather than two shorted tubes.
 
 # Terms of use
 
