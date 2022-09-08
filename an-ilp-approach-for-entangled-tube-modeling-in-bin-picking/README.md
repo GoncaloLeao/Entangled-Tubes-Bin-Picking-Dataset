@@ -40,6 +40,10 @@ Optionally, for Ubuntu, it is recommended to install [rlwrap](https://github.com
 
 All these software elements are free.
 
+It is strongly recomended to read [Aleph's manual](https://www.di.ubi.pt/~jpaulo/competence/tutorials/aleph.pdf) to understand how ILP works and, specially, to learning about Aleph's parameters. The scientific paper associated with this repository illustrated in the results section how Aleph's parameters have a huge impact on the result, both in terms of:
+- the quality/predictive value of the induced theory;
+- the training time.
+
 # Instructions
 
 For both training and testing, we begin by opening SWI-Prolog in the console while inside the root folder of this repository:
@@ -81,7 +85,9 @@ In the end, the user should see a result as depicted below:
 
 The induced theory (set of Prolog rules) is below the ```[theory]``` tag. In this case, the theory contains three rules. 
 
-Under ```[training set performance]```, a set of results are depicted, including the resulting confusion matrix of applying the induced theory to the training set, the accuract and the training time.
+Under ```[Training set performance]```, a set of results are depicted, including the resulting confusion matrix of applying the induced theory to the training set, the accuract and the training time.
 
+After this first training example, multiple elements can be changed, namely:
+- Aleph's parameters: these par
 
 ## Testing 
