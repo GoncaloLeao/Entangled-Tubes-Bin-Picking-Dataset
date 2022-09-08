@@ -28,6 +28,13 @@ TBA
 TBA
 ```
 
+# Datasets
+
+The datasets used are described in the scientific paper associated with this repository. Each test case of a dataset was constructed using the following steps:
+- In the Gazebo simulator, a set of entangled tubes are spawned and dropped inside a bin using a tube shape generation algorithm described in [previous work](https://www.researchgate.net/publication/359745643_Using_Simulation_to_Evaluate_a_Tube_Perception_Algorithm_for_Bin_Picking). This algorithm procedurally generates tubes with random shapes, according to a set of user-defined parameters.
+- After the tubes have stopped moving inside the bin, their pose and shape is recorded as a set of graphs, as described in previous work [previous work](https://www.researchgate.net/publication/359745643_Using_Simulation_to_Evaluate_a_Tube_Perception_Algorithm_for_Bin_Picking).
+- A unique identifier is given to the test case and the Prolog clauses for the background knowledge, positive and negative examples of the test case are created.
+
 # Prerequisites
 
 This tutorial was tested in Ubuntu 18.04, but it should also work on other Linux operating systems and on Windows.
@@ -112,7 +119,3 @@ If this repository's version of ```test.pl``` is used without any modifications,
 ![Testing output](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/testing.png?raw=true)
 
 The user can freely modify the code of ```test/0``` to include other metrics to measure the predictive performance.
-
-# Datasets
-
-The datasets used are described in the scientific paper associated with this repository.
