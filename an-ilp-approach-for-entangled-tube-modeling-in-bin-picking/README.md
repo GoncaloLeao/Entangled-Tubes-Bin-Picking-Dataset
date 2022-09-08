@@ -73,7 +73,7 @@ The user then needs to be patient while the training is being performed. If the 
 
 In the end, the user should see a result as depicted below:
 
-![Training console output](https://raw.github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/training.png)
+![Training output](https://github.com/GoncaloLeao/Entangled-Tubes-Bin-Picking-Dataset/blob/master/an-ilp-approach-for-entangled-tube-modeling-in-bin-picking/images/training.png?raw=true)
 
 
 ## Testing 
