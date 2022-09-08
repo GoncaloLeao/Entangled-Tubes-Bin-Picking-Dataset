@@ -28,6 +28,6 @@ TBA
 
 In order to form ILP with this repository's files, the following software is needed:
 - SWI-Prolog, the Prolog interpreter
-- Aleph, the ILP engine
+- Aleph, the ILP engine. The [port of Aleph for SWI-Prolog by Fabrizio Riguzzi](https://github.com/friguzzi/aleph) is recomended.
 
 All these software elements are free.
